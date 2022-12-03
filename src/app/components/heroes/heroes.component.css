@@ -25,6 +25,10 @@
   display: block;
   width: 100%;
 }
+delete(hero: Hero): void {
+  this.heroes = this.heroes.filter(h => h !== hero);
+  this.heroService.deleteHero(hero.id).subscribe();
+}
 
 .heroes a:hover {
   color: #2c3a41;
